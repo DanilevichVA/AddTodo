@@ -19,6 +19,6 @@ paddingBottom: 10
     },
     text: {
 color: "white",
-fontSize: 20
+fontSize: 22
     }
 })
