@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Navbar } from './src/Navbar';
 import { AddTodo } from './src/AddTodo';
 import { Todo } from './src/Todo';
@@ -14,14 +14,14 @@ export default function App() {
  }
   return <View >
     <Navbar title = "Todo App"/>
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <AddTodo onSubmit={addTodo} /> 
       <View>
         {todos.map(todo =>{
           return <Todo todo={todo} key={todo.id} />
         })}
       </View>
-      </View>
+      </ScrollView>
   </View>
   
 }
